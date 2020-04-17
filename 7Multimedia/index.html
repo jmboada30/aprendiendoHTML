@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia</title>
+
+    <!-- Un poco de CSS -->
+    <style>
+        video{
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multimedia</h1>
+<!-- EL CODEC Universal para cargar videos a Internet y sea reproducido en todos lados es H.264 -->
+
+    <h2>Video con botones en JS</h2>
+    <!-- no sirve para videos de Yotube -->
+    <!-- Primero lo hacemos con botones propios usando JS -->
+    <video id="video" src="media/video.mkv"  poster="media/programacion.jpg"></video>
+    <button id="play">Play</button>
+    <button id="pause">Pause</button>
+
+    <script>
+        const video = document.getElementById('video');
+        const play = document.getElementById('play');
+        const pause = document.getElementById('pause');
+
+        play.addEventListener('click', () => {video.play()});
+        pause.addEventListener('click', () => {video.pause()});
+    </script>
+
+    <hr>
+    <h2>Video con solo el atributo controls activa</h2>
+    <!-- Ahora lo hacemos con solo una linea, usando el atributo controls -->
+    <video controls src="media/video.mkv"  poster="media/programacion.jpg"></video>
+
+    <hr>
+    <h2>Audio</h2>
+    <!-- Para el tema del audio usar la etiqueta Audio listo y poner el atributo controls -->
+    <audio src="media/audio.mp3" controls></audio>
+
+    <!-- nunca poner atributo autoplay para un audio SERIA LO PEOR DEL MUNDO. -->
+
+    <!-- Se pueden copiar ya framework listos para reproductores de audio y video en las paginas:
+    https://videojs.com/
+    https://flowplayer.com/
+    -->
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <h1>Formularios</h1>
+    <!-- Siempre se comienza con form -->
+    <form method="POST" action="www.omninexo.com/registrame"
+        
+    >
+
+
+        <!-- fieldset es para agrupar los campos -->
+        <fieldset>
+            <legend>Inicio de Sesión</legend>
+            <div>
+                <!-- Se usa label para cada datos que vayamos a capturar -->
+                <label>
+                    <!-- Cada dato puede tener un formato predefinido -->
+                    <input type="text" name="username" placeholder="Usuario" required>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <!-- Se usa solo el Type como una forma de ayudar al Usuario, pero nunca se debe tomar como medida de seguridad -->
+                    <!-- Con requied el campo se vuelve obligatorio -->
+                    <input type="password" name="password" placeholder="Contraseña" required>
+                </label>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Datos Extras</legend>
+            <div>
+                <label>
+                    <input type="email" name="email" placeholder="Ingrese su Email">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Nacimiento: 
+                    <input type="date" name="date">
+                </label>
+            </div>
+            <div>
+                <label>
+                    <!-- con el atributo readonly solo es para lectura este campo -->
+                    Cantidad: 
+                    <input type="number" name="number" value="1" readonly>
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Tus pasatiempos</legend>
+            <!-- con los check box podemos escoger varias cosas. -->
+                <label><input type="checkbox" name="ch1">Deportes</label>
+                <label><input type="checkbox" name="ch2">Cine</label>
+                <label><input type="checkbox" name="ch3">Musica</label>
+                <label><input type="checkbox" name="ch4">Leer</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Tus género</legend>
+            <!-- En caso de los type radio el name debe ser igual para que solo se escoja uno -->
+                <label><input type="radio" name="gender">Honbre</label>
+                <label><input type="radio" name="gender">Mujer</label>
+                <label><input type="radio" name="gender">Otros</label>
+        </fieldset>
+
+        <fieldset>
+            <!-- asi se hace un combobox, con optgroup se agrupan los item. -->
+            <legend>Tu país</legend>
+            <label for="country">Escoge tu pais</label>
+            <select name="country" id="country">
+                <optgroup label="America">
+                    <option value="ve">Venezuela</option>
+                    <option value="co">Colombia</option>
+                    <option value="pe">Perú</option>
+                </optgroup>
+                <optgroup label="Europa">
+                    <option value="es">España</option>
+                    <option value="it">Italia</option>
+                </optgroup>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Ingresa tu mensaje</legend>
+            <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+        </fieldset>
+
+        <!-- Con submit enviamos los datos al BackEnd, osea al servidor para ser validados nuevamente y ser guardados o procesados por la BD -->
+        <input type="submit" value="Iniciar Sesión">
+    </form>
+</body>
+</html>

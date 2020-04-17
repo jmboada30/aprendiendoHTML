@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Tablas</h1>
+    <!-- la etiq table es para definir tablas y engloba todo, nunca colocar border como atributo en este caso solo se hace para ver como se ve. -->
+    <table>
+        <!-- caption es para poner nombre a la tabla -->
+        <caption>
+            Mi horario de clases
+        </caption>
+        <!-- thead es la cabecera de la tabla en html -->
+        <colgroup>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col style="background:yellow">
+        </colgroup>
+        <thead>
+            <!-- tr es cada fila, no existen las columnas, solo se trabaja con filas. -->
+            <tr>
+                <!-- th es la fila de la cabecera. -->
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+        </thead>
+
+        <!-- el cuerpo de la tabla es tbody -->
+        <tbody>
+
+            <tr>
+                <!-- td es las filas que estan en el cuerpo de la tabla -->
+                <td>JS</td>
+                <td>CSS</td>
+                <td>HTML</td>
+                <td>.NET</td>
+                <td>SQL</td>
+            </tr>
+            <tr>
+                <!-- colspan une celdas en la fila -->
+                <td colspan="5">
+                    RECREO
+                </td>
+            </tr>
+            <tr>
+                <!-- rowsapn es para unir dos celdas en columna. -->
+                <td rowspan="2">JAVA</td>
+                <td>.NET</td>
+                <td>CSS</td>
+                <td>SQL</td>
+                <td rowspan="2">NOSQL</td>
+            </tr>
+            
+            <tr>
+                <td>JAVA</td>
+                <td>GO</td>
+                <td>REDES</td>
+            </tr>
+        </tbody>
+
+        <!-- tfoot es el final de una tabla donde se ven los resultados. -->
+        <tfoot>
+            <tr style="background:yellow">
+                <td>2 Creditos</td>
+                <td>4 Creditos</td>
+                <td>1 Creditos</td>
+                <td>3 Creditos</td>
+                <td>2 Creditos</td>
+            </tr>
+        </tfoot>
+        
+    </table>
+</body>
+</html>

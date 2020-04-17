@@ -1,0 +1,68 @@
+<!-- el doctype es para decirle al navegador q estamos trabajando con HTML5 -->
+<!DOCTYPE html>
+<!-- La etiqueta html es la principal donde va todo el codigo, y se establece el idioma es para español -->
+<html lang="es">
+
+<!-- el head es el espacio en codigo donde se establecen los metadatos o datos que son consumibles para
+la web, ejemplo cual es el titulo de la Pagina, cual es la descripcion de la Pagina
+el formato que usara el navegador para ver la pagina, etc. -->
+    <head>
+        <!-- el chartset representa la codificacion de idioma que tomara el navegador.
+        UTF-8 es para español latino por ejemplo. Usando ñ y comas. 
+        Si no especificamos eso habra problemas porq el navegador tomara la codificacion por defecto
+        y las ñ desapareceran por simbolos locos en el texto que veran los usuarios de la pagina-->
+        <meta charset="UTF-8">
+        <!-- la sig linea le indica al navegador como visualizar el contenido. 
+        Es para Diseño responsivo -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Descripcion de toda la pagina. -->
+        <meta name = "description" content="Mi primer proyecto en HTML curso EDTEAM">
+        <!-- Titulo de la pagina. -->
+        <title>Mi primera página web</title>
+        <!-- La siguiente linea es para unir a html con el css -->
+        <link rel="stylesheet" href="styles.css">
+        <!-- Para el icono de la pagina. -->
+        <link rel="shortcut icon" href="favicon.png">
+    </head>
+
+    <!-- Ahora viene el Body o cuerpo de la pagina, todo lo escrito alli si se ve en la pagina, a diferencia del head. -->
+    <body>
+        <!-- logo de la pagina -->
+        <header><img src="img/logo.png" alt=""></header>
+
+        <!-- nav es para la seccion de navegacion de la pagina. -->
+        <nav>
+            <!-- con ahref se puede ir a otra pagina u otro sitio de la misma pagina. -->
+            <a href="#">Inicio</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <!-- Titulo principal del contenido de la pagina, se recomienda solo un H1 por temas de CEO -->
+        <h1>Bienvenidos a mi Sitio Web h1</h1>
+        
+        <!-- articulos publicados en la pagina, que tienes secciones. -->
+        <article>
+            <section>
+            <h2>Dia 1 de aprendizaje h2</h2>
+            <p>Esto es un parrafo.... Es importante que no se use los h1,h2... para poner negritas.
+                Los h son para titulos dentro del contenido respetando jerarquias.
+            </p>
+
+            </section>
+        </article>
+
+        <!-- con aside se agrega contenido que no tiene que ver con la pagina. -->
+        <aside>
+            <p> Compra el curso... (Esto es aside osea publicidad).</p>
+        </aside>
+
+        <!-- footer es la ultima parte de la pagina. X ejemplo Agradesimientos -->
+        <footer>
+            Hecho por Joel Boada! Solo en HTML
+        </footer>
+        
+        <!-- script es para agregar javascript a html osea comportamiento darle vida a la pag. -->
+        <script src="scripts.js"></script>
+    </body>
+
+</html>

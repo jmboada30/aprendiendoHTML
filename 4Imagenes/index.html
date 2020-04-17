@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagenes</title>
+</head>
+<body>
+    
+    
+    <!-- Las imagenes puedes ser traidas desde una pagina externa o desde la propia pagina, se recomienda que en produccion las paginas siempre sean propias.
+    En el desarrollo por lo pronto puede ser desde una pagina externa. -->
+
+    <!-- Ejemplo pagina externa -->
+    <!-- <h2>Imagen Externa</h2>
+    <img src="https://images.pexels.com/photos/264547/pexels-photo-264547.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Imagen de un carrito de compra del Super" height="500px" width="500px"> -->
+    <!-- Nota: el atributo alt: es usado por el navegador para describir la imagen que se coloco, una persona con problemas de vision puede escuchar de que se trata la imagen. -->
+
+    <!-- Ejemplo imagen interna. -->
+    <!-- <h2>Imagen Interna</h2>
+    <img src="./img/programacion.jpg" alt="" height="500px" width="500px"> -->
+
+    <!-- Las imagenes JPG o JPEG tienen mucho detalle se usan para fotos de personas, las PNG solo tienen colores planos no tienen degradados. Pueden usarse en Iconos o logos. -->
+
+    <!-- Las imagenes pueden ser vectoriales, en ese caso no son pixeles, son formulas matematicas las que crean la imagen. La ventaja es que no pieden la calidad al reducir o ampliar la imgen.
+    Perfectas para Iconos. Pero no pueden nunca tener muchos detalles. Sombreados o efectos de luz. -->
+
+    <!-- En esta parte veremos el picture, el cual es importante para el Responsive Design -->
+
+    <!-- Cuando tenemos una imagen grande que se vera mal en la pantalla pequeña de un telefono aplicamos el picture de la sig manera. -->
+    <picture>
+		<!-- Se usa tanto srcset como media(para controlar el tamaño de pantalla). -->
+        <source srcset="img/vd.jpg" 
+        media="(min-width: 800px)">
+        <source srcset="img/programacion.jpg" 
+        media="(min-width: 500px)">
+			<!-- Imagen por defecto si no cumple con ninguna regla -->
+		<source src="img/servidores.jpg" alt="imagen por defecto" height="500px" width="500px" >
+			<!-- Imagen por defecto si el navegador no soporta la etiqueta picture -->
+		<img src="img/servidores.jpg" alt="imagen por defecto" />
+	</picture>
+        
+
+</body>
+</html>
